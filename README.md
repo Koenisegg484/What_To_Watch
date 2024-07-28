@@ -1,4 +1,4 @@
-# What_To_Watch# What To Watch
+# What_To_Watch
 
 What To Watch is a movie recommendation website built using React for the frontend, Django for the backend, and Python for the machine learning model. The project aims to provide personalized movie recommendations based on user inputs such as genres, cast, keywords, and movie overview.
 
