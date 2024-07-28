@@ -3,7 +3,7 @@ import React from 'react';
 
 const MovieList = ({ movies }) => {
   return (
-    <div>
+    <div className="movie-list">
       <h2>Recommended Movies</h2>
       <ul>
         {movies.map((movie) => (

@@ -21,9 +21,18 @@ body {
   background-size: 107%;
   background-repeat: no-repeat;
   background-position: center;
-  animation: backgroundScroll 60s infinite alternate linear;
+  animation: backgroundScroll 30s infinite alternate linear;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Change opacity here */
+  z-index: -1;
+}
 /* src/components/Navbar.css */
 .navbar {
   display: flex;
@@ -51,6 +60,35 @@ body {
   margin: 0;
   color: #FFE6E6;
   font-size: 2.5em;
+}
+
+.navbar .nav-links a {
+  color: #C73659;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.recommendations-container {
+  text-align: center;
+  color: #eeeeee;
+  background-color: #151515;
+  padding: 20px;
+}
+
+.recommendations-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recommendations-container li {
+  background-color: #c73659;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .App {
@@ -115,6 +153,8 @@ body {
 }
 
 .recommendation-form label {
+  align-items: center;
+  text-align: center;
   font-size: 2.2em;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 10px 0;
@@ -128,6 +168,7 @@ body {
   padding: 10px;
   font-size: 1.2em;
   margin: auto;
+  margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid #EEEEEE;
   border-radius: 5px;
@@ -168,19 +209,45 @@ body {
 }
 
 
+/* src/components/MovieList.css */
+.movie-list {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.movie-list h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 
+.movie-list ul {
+  list-style: none;
+  padding: 0;
+}
 
+.movie-list li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
 
+.about-us {
+  color: #EEEEEE;
+  text-align: center;
+  padding: 50px;
+}
 
+.about-us h1 {
+  color: #A91D3A;
+}
 
+.about-us p a {
+  color: #C73659;
+  text-decoration: none;
+}
 
-
-
-
-
-
-
+.about-us p a:hover {
+  text-decoration: underline;
+}
 
 
 

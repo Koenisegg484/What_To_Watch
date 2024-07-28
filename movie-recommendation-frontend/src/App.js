@@ -9,6 +9,7 @@ import './App.css';
 const App = () => {
   const [started, setStarted] = useState(false);
   const [movies, setMovies] = useState([]);
+  const [showForm, setShowForm] = useState(true);
 
   const startRecommendation = () => {
     setStarted(true);
@@ -21,6 +22,7 @@ const App = () => {
       const data = await response.json();
       console.log('Received data:', data);
       setMovies(data.recommended_movies);
+      setShowForm(false);
     } catch (error) {
       console.error('Error fetching recommendations:', error);
     }
@@ -28,16 +30,21 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="overlay"></div>
       <Navbar />
       {started ? (
         <>
-          <RecommendationForm onGetRecommendations={getRecommendations} />
-          <MovieList movies={movies} />
+          {showForm ? (
+            <RecommendationForm onGetRecommendations={getRecommendations} />
+            ) : (
+              <MovieList movies={movies} />
+            )}
         </>
       ) : (
         <Intro onStart={startRecommendation} />
       )}
     </div>
+    
   );
 };
 
