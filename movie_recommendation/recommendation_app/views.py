@@ -17,7 +17,6 @@ def recommend_movies(request):
         }
         
         # Load the trained model artifacts
-        similarity_matrix = joblib.load('recommendation_app/ml/similarity_matrix.pkl')
         tfidf_vectorizer = joblib.load('recommendation_app/ml/TF_IDF_Vectorizer.pkl')
         features_prev = joblib.load('recommendation_app/ml/features.pkl')
         scaler = joblib.load('recommendation_app/ml/scaler.pkl')

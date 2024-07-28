@@ -1,37 +1,171 @@
-/* src/App.css */
-.App {
-  text-align: center;
-  margin: 20px;
+@keyframes backgroundScroll {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: center;
+  }
 }
 
-form {
+body {
+  background-color: #151515;
+  color: #EEEEEE;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* padding-top: 70px; Adjust this if your navbar height changes */
+  background-image: url('./backgroundDoodle.jpg');
+  background-size: 107%;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: backgroundScroll 60s infinite alternate linear;
+}
+
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #EEEEEE;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-tagline {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-tagline h1 {
+  margin: 0;
+  color: #FFE6E6;
+  font-size: 2.5em;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
 
-label {
-  margin: 10px;
+.intro h1 {
+  color: #A91D3A;
+  font-size: 6em;
+  font-weight: 900;
+  font-style: oblique;
+  font-variant: small-caps;
+  margin-bottom: 20px;
 }
 
-input {
-  margin-left: 10px;
+.intro p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
 }
 
-button {
+.intro button {
+  background-color: #C73659;
+  border: none;
+  color: #EEEEEE;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.intro button:hover {
+  background-color: #A91D3A;
+}
+
+.recommendation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.recommendation-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  background-color: #222222;
+  margin-top: -25vh;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.recommendation-form label {
+  font-size: 2.2em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 10px 0;
+  color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+}
+
+.recommendation-form input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1.2em;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  background-color: #151515;
+  color: #EEEEEE;
+}
+
+.recommendation-form button {
+  background-color: #C73659;
+  border: none;
+  color: #EEEEEE;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.recommendation-form button:hover {
+  background-color: #A91D3A;
+}
+
+.movie-list {
   margin-top: 20px;
 }
 
-ul {
+.movie-list ul {
   list-style-type: none;
   padding: 0;
 }
 
-li {
-  margin: 10px 0;
+.movie-list li {
+  background-color: #222222;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #EEEEEE;
+  font-size: 1.2em;
 }
-
-
 
 
 
